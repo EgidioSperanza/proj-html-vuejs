@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <header-app />
+    <header-app
+      :jumboSlides="jumboSlides"
+    />
     <section-news :news="news" />
-    <section-testimonials />
-    <main-app />
+    <section-testimonials :testimonials="testimonials" />
     <footer-app />
   </div>
 </template>
@@ -12,7 +13,6 @@
 import HeaderApp from './components/HeaderApp.vue'
 import SectionNews from './components/SectionNews.vue'
 import SectionTestimonials from './components/SectionTestimonials.vue'
-import MainApp from './components/MainApp.vue'
 import FooterApp from './components/FooterApp.vue'
 
 export default {
@@ -21,12 +21,32 @@ export default {
     HeaderApp,
     SectionNews,
     SectionTestimonials,
-    MainApp,
     FooterApp,
   },
   data() {
     return {
-      news: ['no-image' ,'no-image','h3-img-1', 'h3-img-2', 'h3-img-3', 'h3-img-4'],
+      jumboSlides: [
+        {
+          textImgPath: 'h3-rev-img-1',
+          pizzaImgPath: 'h3-rev-img-2',
+        },
+        {
+          textImgPath: 'h3-rev-img-3',
+          pizzaImgPath: 'h3-rev-img-4',
+        },
+        {
+          textImgPath: 'h3-rev-img-5',
+          pizzaImgPath: 'h3-rev-img-6',
+        },
+      ],
+      news: [
+        'no-image',
+        'no-image',
+        'h3-img-1',
+        'h3-img-2',
+        'h3-img-3',
+        'h3-img-4',
+      ],
       testimonials: [
         {
           text:
@@ -57,10 +77,12 @@ export default {
           text:
             '"forget the trendy pizza shop, this hidden sspot makes the best new york-style pizza slice in naples"',
           author: 'Washington post',
-          date: 2018,
+          date: 2019,
         },
       ],
     }
+  },
+  methods: {
   },
 }
 </script>

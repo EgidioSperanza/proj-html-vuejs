@@ -34,9 +34,22 @@
       </div>
     </div>
     <div class="jumbotron">
-      <div class="label prev"></div>
-      <div class="jumbo-focus"><img src="/img/jumbotron/h3-rev-img-2.png" alt="" /></div>
-      <div class="label next"></div>
+    <div class="label" @click="prevSlide(jumboSlides.length-1)"><div class="prev"><span>Prev</span></div></div>
+    <div>
+      <div
+        v-for="(jumboSlide, index) in jumboSlides"
+        :key="index"
+      >
+      <div :class="currentIndex === index ? 'jumbo-focus' : 'hide'" :style='{ background: `url("/img/jumbotron/${jumboSlide.textImgPath}.png") no-repeat center` }'>
+        <img
+        
+          :src="`/img/jumbotron/${jumboSlide.pizzaImgPath}.png`"
+          alt=""
+        />
+      </div>
+      </div>
+    </div>
+    <div class="label" @click="nextSlide(jumboSlides.length-1)"><div class="next"><span>Next</span></div></div>
     </div>
   </header>
 </template>
@@ -44,7 +57,30 @@
 <script>
 export default {
   name: 'HeaderApp',
-  props: {},
+  data() {
+    return {
+      currentIndex:0
+    }
+  },
+  props: {
+    jumboSlides: Array,
+  },
+  methods: {
+    prevSlide(iMax) {
+      if (this.currentIndex <= 0) {
+        this.currentIndex = iMax
+      } else {
+        this.currentIndex--
+      }
+    },
+    nextSlide(iMax) {
+      if (this.currentIndex >= iMax) {
+        this.currentIndex = 0
+      } else {
+        this.currentIndex++
+      }
+    },
+  },
 }
 </script>
 

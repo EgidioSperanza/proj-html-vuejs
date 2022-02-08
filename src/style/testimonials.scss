@@ -1,0 +1,56 @@
+@import './variables.scss';
+@import './label-prev-next.scss';
+
+
+.testimonials-section {
+  width: 100%;
+  background: url('/img/testimonials/h3-testimonials-bckgrnd.jpg') no-repeat center;
+  background-size: contain;
+  background-color: $bkg-testimonials;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  .testimonial {
+    width: $container-testimonials;
+    margin: 100px 0;
+    .testimonial-target {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      text-align: center;
+      .quotes {
+        color: $text-gold;
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+      p{
+        margin-bottom:10px ;
+        font-weight: 900;
+        font-size: 20px;
+      }
+      p.testimonial-author{
+        color: $text-orange;
+        font-size: 15px;
+    }
+    }
+    .slider{
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      .slider-point{
+        margin: 0 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-color: $bkg-light-gray;
+        cursor: pointer;
+      }
+      .slider-point.active{
+        background-color: $bkg-gold;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+//LABELS PREv NEXT
+.label {
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 900;
+  font-size: 20px;
+  color: $text-orange-red;
+  padding: 0 20px;
+cursor: pointer;
+  .prev {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 150px;
+    width: 100px;
+    transform: translate(-50%, -50%);
+    border-radius: 0 150px 150px 0;
+    background-color: $labels-bkg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        transform-origin: 1 1;
+        transform: rotate(90deg);   
+    }
+  }
+  .next {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    height: 150px;
+    width: 100px;
+    border-radius: 150px 0 0 150px;
+    background-color: $labels-bkg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        transform-origin: 1 1;
+        transform: rotate(270deg);   
+    }
+  }
+}
+

@@ -1,9 +1,10 @@
 @import './variables.scss';
+@import './label-prev-next.scss';
 
 header {
   background-color: $bkg-dark;
   color: $text-white;
-  padding: 20px;
+  padding: 20px 0;
 
   .navbar {
     margin: 0 auto;
@@ -27,13 +28,14 @@ header {
 ul {
   list-style: none;
   display: flex;
-  li{
-      margin: 0 20px;
+  li {
+    margin: 0 20px;
   }
 }
 
 .logo {
   height: 100px;
+  margin: 0 40px;
   img {
     height: 100%;
   }
@@ -45,9 +47,10 @@ ul {
   align-items: center;
   padding: 20px 0;
 
-  .jumbo-focus{
-      width: $container-width;
-      display: flex;
-      justify-content: center;
+  .jumbo-focus {
+    width: $container-width;
+    height: 450px;
+    display: flex;
+    justify-content: center;
   }
 }

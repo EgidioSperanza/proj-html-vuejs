@@ -1,29 +1,20 @@
+@import url('https://use.fontawesome.com/releases/v5.7.1/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import './variables.scss';
 
-*{
-    padding:0px;
-    margin:0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-button{
-    background-color: $btn-orange;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    color:$text-white;
+button {
+  background-color: $btn-orange;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  color: $text-white;
 }
 
-//LABELS PREv NEXT
-.label {
-    width: 120px;
-    height: 120px;
-    border-radius: 100%;
-    background-color: $labels-bkg;
-    
-  }
-  .label.prev{
-    margin-left: -90px;
-  }
-  .label.next{
-    margin-right: -90px;
-  }
+.hide {
+  display: none;
+}
