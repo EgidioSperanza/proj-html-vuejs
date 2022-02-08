@@ -34,9 +34,9 @@
       </div>
     </div>
     <div class="jumbotron">
-      <div class="jumbo label-prew"></div>
+      <div class="label prev"></div>
       <div class="jumbo-focus"><img src="/img/jumbotron/h3-rev-img-2.png" alt="" /></div>
-      <div class="jumbo label-next"></div>
+      <div class="label next"></div>
     </div>
   </header>
 </template>

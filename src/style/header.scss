@@ -3,19 +3,18 @@
 header {
   background-color: $bkg-dark;
   color: $text-white;
+  padding: 20px;
 
   .navbar {
     margin: 0 auto;
-    width: 1200px;
+    width: $container-width;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     nav {
       display: flex;
-      gap: 40px;
       align-items: center;
-      margin-top: 20px;
     }
   }
 }
@@ -28,7 +27,9 @@ header {
 ul {
   list-style: none;
   display: flex;
-  gap: 40px;
+  li{
+      margin: 0 20px;
+  }
 }
 
 .logo {
@@ -42,19 +43,11 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
+  padding: 20px 0;
 
-  .jumbo {
-    width: 120px;
-    height: 150px;
-    border-radius: 100%;
-    background-color: $labels-bkg;
-    
-  }
-  .jumbo.label-prew{
-    margin-left: -60px;
-  }
-  .jumbo.label-next{
-    margin-right: -60px;
+  .jumbo-focus{
+      width: $container-width;
+      display: flex;
+      justify-content: center;
   }
 }
