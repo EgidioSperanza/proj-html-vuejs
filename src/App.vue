@@ -17,11 +17,14 @@ export default {
     HeaderApp,
     MainApp,
     FooterApp,
-  }
+  },
+  data() {
+    return {
+    }
+  },
 }
 </script>
 
 <style lang="scss">
 @import './style/main.scss';
-
 </style>

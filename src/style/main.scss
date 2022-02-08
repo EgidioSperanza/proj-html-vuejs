@@ -1,1 +1,14 @@
 @import './variables.scss';
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: 0px;
+}
+
+button{
+    background-color: $btn-orange;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    color:$text-white;
+}

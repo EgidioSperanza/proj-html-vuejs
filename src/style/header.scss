@@ -1,1 +1,60 @@
 @import './variables.scss';
+
+header {
+  background-color: $bkg-dark;
+  color: $text-white;
+
+  .navbar {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-top: 20px;
+    }
+  }
+}
+.menu-left,
+.menu-right,
+.navbar-right {
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.logo {
+  height: 100px;
+  img {
+    height: 100%;
+  }
+}
+
+.jumbotron {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+
+  .jumbo {
+    width: 120px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: $labels-bkg;
+    
+  }
+  .jumbo.label-prew{
+    margin-left: -60px;
+  }
+  .jumbo.label-next{
+    margin-right: -60px;
+  }
+}
