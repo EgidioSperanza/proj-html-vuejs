@@ -11,6 +11,11 @@
 body{
   font-family: 'Roboto', sans-serif;
 }
+
+a:link,a:visited{
+  text-decoration: none;
+  color:$text-white;
+}
 button {
   background-color: $btn-orange;
   text-transform: uppercase;

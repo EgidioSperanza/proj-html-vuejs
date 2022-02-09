@@ -123,7 +123,7 @@ export default {
         },
         {
           id: 'w0z97',
-          name: 'John Doe',
+          name: 'Jane Doe',
           picture: 'h1-team-2a',
           mansions: ['Pizza Chef'],
           socials: [
@@ -131,20 +131,20 @@ export default {
               instagram: '/path',
               twitter: '/path',
               facebook: '/path',
-              linkedin: '/path',
+              linkedin: null,
             },
           ],
           vote_relevance: 20,
         },
         {
           id: 'we-xy',
-          name: 'Jane Doe',
+          name: 'John Doe',
           picture: 'h1-team-1a-700x700',
           mansions: ['Kitchen Porter', 'Pizza Chef'],
           socials: [
             {
               instagram: '/path',
-              twitter: '/path',
+              twitter: null,
               facebook: '/path',
               linkedin: '/path',
             },
@@ -153,22 +153,22 @@ export default {
         },
         {
           id: '8ioh9',
-          name: 'John Doe',
+          name: 'Jane Doe',
           picture: 'h1-team-3a',
           mansions: ['Kitchen Porter'],
           socials: [
             {
               instagram: '/path',
-              twitter: '/path',
+              twitter: null,
               facebook: '/path',
-              linkedin: '/path',
+              linkedin: null,
             },
           ],
           vote_relevance: 10,
         },
         {
           id: '1y20w',
-          name: 'Jane Doe',
+          name: 'John Doe',
           picture: 'h1-team-4a',
           mansions: ['Photograph'],
           socials: [

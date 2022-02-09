@@ -1,8 +1,39 @@
 <template>
   <section class="section-team">
     <div class="team" v-for="member in relevanceTeamMembers()" :key="member.id">
+      <img :src="`/img/team/${member.picture}.jpg`" :alt="member.name" />
       <div class="member">
-        <img :src="`/img/team/${member.picture}.jpg`" :alt="member.name" />
+        <h2>{{ member.name }}</h2>
+        <div class="mansions">
+          <p v-for="(mansion, index) in member.mansions" :key="index">
+            {{ mansion }}
+          </p>
+        </div>
+        <div class="socials">
+          <span v-for="(social, index) in member.socials" :key="index">
+            <span v-if="social.instagram !== null">
+              <a :href="social.instagram" target="blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </span>
+            <span v-if="social.twitter !== null">
+              <a :href="social.instagram" target="blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </span>
+            <span v-if="social.facebook !== null">
+              <a :href="social.instagram" target="blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </span>
+            <span v-if="social.linkedin !== null">
+              <a :href="social.instagram" target="blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </span>
+            <!-- <span v-for="(linkSocial, index) in social" :key="index">{{linkSocial}}</span> -->
+          </span>
+        </div>
       </div>
     </div>
   </section>
@@ -55,16 +86,50 @@ export default {
 
 .section-team {
   width: 100%;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   .team {
     width: calc(100% / 4);
-    .member {
+    &:hover {
+      background: url('/img/pixel-bkg/bkg-pixel-news.png');
+      padding: 30px;
+    }
+    &:hover img {
+      display: none;
+    }
+    &:hover .member {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
       width: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+      height: 100%;
+      object-fit: contain;
+    }
+    .member {
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: $bkg-orange-red;
+      color: $text-white;
+
+      h2 {
+        text-transform: uppercase;
+      }
+      .mansions {
+        display: flex;
+
+        p {
+          padding: 5px;
+          color: $text-no-pure-white;
+        }
+      }
+      .socials i {
+        padding: 5px;
+        font-size: 20px;
       }
     }
   }
