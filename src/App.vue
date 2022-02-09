@@ -5,8 +5,9 @@
     <section-testimonials :testimonials="testimonials" />
     <section-specials :specials="specials" />
     <section-custom-service />
-    <section-team :teamMembers="teamMembers"/>
+    <section-team :teamMembers="teamMembers" />
     <section-partners :partners="partners" />
+    <section-pizza :pizzaMenu="pizzaMenu" />
     <footer-app />
   </div>
 </template>
@@ -19,6 +20,7 @@ import SectionSpecials from './components/SectionSpecials.vue'
 import SectionCustomService from './components/SectionCustomService.vue'
 import SectionTeam from './components/SectionTeam.vue'
 import SectionPartners from './components/SectionPartners.vue'
+import SectionPizza from './components/SectionPizza.vue'
 import FooterApp from './components/FooterApp.vue'
 
 export default {
@@ -31,6 +33,7 @@ export default {
     SectionCustomService,
     SectionTeam,
     SectionPartners,
+    SectionPizza,
     FooterApp,
   },
   data() {
@@ -185,28 +188,72 @@ export default {
           vote_relevance: 10,
         },
       ],
-      partners:[
+      partners: [
         {
-          name:'Cowboy',
-          logo:'h1-clients-img-1',
+          name: 'Cowboy',
+          logo: 'h1-clients-img-1',
         },
         {
-          name:'Gordon',
-          logo:'h1-clients-img-2',
+          name: 'Gordon',
+          logo: 'h1-clients-img-2',
         },
         {
-          name:'Big Cheese',
-          logo:'h1-clients-img-3',
+          name: 'Big Cheese',
+          logo: 'h1-clients-img-3',
         },
         {
-          name:'Bludoos Bar',
-          logo:'h1-clients-img-4',
+          name: 'Bludoos Bar',
+          logo: 'h1-clients-img-4',
         },
         {
-          name:'Vegan',
-          logo:'h1-clients-img-5',
+          name: 'Vegan',
+          logo: 'h1-clients-img-5',
         },
-      ]
+      ],
+      pizzaMenu: [
+        {
+          name: 'Bismark',
+          image: 'h3-product-img-1a-100x100',
+          minPrice: '$30.00',
+          maxPrice: null,
+          labelSold: false,
+        },
+        {
+          name: 'Fiori di Zucca',
+          image: 'h3-product-img-2a-150x150',
+          minPrice: '$7.00',
+          maxPrice: '$50.00',
+          labelSold: false,
+        },
+        {
+          name: 'Valdostana',
+          image: 'h3-product-img-3a-150x150',
+          minPrice: '$55.00',
+          maxPrice: null,
+          labelSold: true,
+        },
+        {
+          name: 'Pizza Tartufata',
+          image: 'h3-product-img-4a-150x150',
+          minPrice: '$45.00',
+          maxPrice: null,
+          labelSold: false,
+        },
+        {
+          name: 'Francescana',
+          image: 'h3-product-img-5a-150x150',
+          minPrice: '$25.00',
+          maxPrice: null,
+          labelSold: false,
+        },
+        {
+          name: 'Campagnola',
+          image: 'h3-product-img-6a-100x100',
+          minPrice: '$50.00',
+          maxPrice: '95.00',
+          labelSold: false,
+        },
+      ],
     }
   },
   methods: {},

@@ -60,6 +60,7 @@ export default {
     width: $container-width;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }
 </style>
