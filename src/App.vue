@@ -5,6 +5,8 @@
     />
     <section-news :news="news" />
     <section-testimonials :testimonials="testimonials" />
+    <section-specials :specials="specials" />
+    <section-custom-service />
     <footer-app />
   </div>
 </template>
@@ -13,6 +15,8 @@
 import HeaderApp from './components/HeaderApp.vue'
 import SectionNews from './components/SectionNews.vue'
 import SectionTestimonials from './components/SectionTestimonials.vue'
+import SectionSpecials from './components/SectionSpecials.vue'
+import SectionCustomService from './components/SectionCustomService.vue'
 import FooterApp from './components/FooterApp.vue'
 
 export default {
@@ -21,6 +25,8 @@ export default {
     HeaderApp,
     SectionNews,
     SectionTestimonials,
+    SectionSpecials,
+    SectionCustomService,
     FooterApp,
   },
   data() {
@@ -78,6 +84,26 @@ export default {
             '"forget the trendy pizza shop, this hidden sspot makes the best new york-style pizza slice in naples"',
           author: 'Washington post',
           date: 2019,
+        },
+      ],
+      specials:[
+        {
+          id:'fff27f37-b1a7-4e9e-8f7a-d237c64737ba',
+          name:'Combo Piccolo',
+          description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet eros nisi, quis viverra lacus interdum sit amet.',
+          price:'$10',
+        },
+        {
+          id:'4055a68b-0a80-4ffb-94d5-8a8945be8358',
+          name:'Combo mezzo',
+          description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet eros nisi, quis viverra lacus interdum sit amet.',
+          price:'$20',
+        },
+        {
+          id:'8c64e919-5fb3-4206-89c9-b7a72e91eb07',
+          name:'Combo Grande',
+          description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet eros nisi, quis viverra lacus interdum sit amet.',
+          price:'$30',
         },
       ],
     }

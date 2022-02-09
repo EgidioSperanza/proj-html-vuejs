@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+.specials-section {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  margin-bottom: 10px;
+  .advertising-image,
+  .specials-menu {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .advertising-image {
+    background: url('/img/specials/h1-img-4.jpg') no-repeat;
+    background-size: cover;
+    img {
+      width: 350px;
+    }
+  }
+  .specials-menu {
+    display: flex;
+    flex-direction: column;
+    .specials-list {
+      width: 50%;
+      max-height: 80%;
+      overflow: auto;
+      h1,
+      h2 {
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 20px;
+        color: $text-gray;
+      }
+
+      .special-element {
+        display: flex;
+        h2 {
+          text-transform: uppercase;
+        }
+        span {
+          font-weight: 900;
+          font-size: 1.5em;
+          padding: 0 10px 0 0;
+          color: $text-orange-red;
+        }
+      }
+    }
+  }
+}

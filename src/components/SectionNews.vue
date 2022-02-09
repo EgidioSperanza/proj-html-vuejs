@@ -32,44 +32,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '@/style/variables.scss';
-.news-section {
-  width: 100%;
-  margin: 10px 0;
-  display: flex;
-  justify-content: space-between;
+@import '@/style/news.scss';
 
-  .news {
-    width: calc((100% / 4) - (30px / 4));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &:hover {
-      background: url('/img/pixel-bkg/bkg-pixel-news.png');
-    }
-    &:hover img {
-      display: none;
-    }
-    &:hover .new-info {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .new-info {
-      display: none;
-      width: 80px;
-      height: 80px;
-      font-size: 30px;
-      color: $text-white;
-      background-color: $bkg-orange-red;
-      border-radius: 100%;
-      cursor: pointer;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
 </style>
