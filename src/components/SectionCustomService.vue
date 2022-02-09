@@ -84,7 +84,7 @@ export default {
       margin-left: 20%;
       text-transform: uppercase;
       font-size: 38px;
-      color: $text-nopure-white;
+      color: $text-no-pure-white;
     }
   }
 }
