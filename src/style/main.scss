@@ -8,13 +8,20 @@
   box-sizing: border-box;
 }
 
-body{
+html,
+body {
+  width: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
-a:link,a:visited{
+#app {
+  width: 100%;
+}
+
+a:link,
+a:visited {
   text-decoration: none;
-  color:$text-white;
+  color: $text-white;
 }
 button {
   background-color: $btn-orange;

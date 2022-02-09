@@ -14,4 +14,7 @@ export default {
 <style scoped lang="scss">
 @import '@/style/header.scss';
 
+footer{
+  width: 100%;
+}
 </style>

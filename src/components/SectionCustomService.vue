@@ -25,6 +25,7 @@ export default {
 <style scoped lang="scss">
 @import '@/style/variables.scss';
 .section-custom {
+  width: 100%;
   margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;

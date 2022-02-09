@@ -6,6 +6,7 @@
     <section-specials :specials="specials" />
     <section-custom-service />
     <section-team :teamMembers="teamMembers"/>
+    <section-partners :partners="partners" />
     <footer-app />
   </div>
 </template>
@@ -17,6 +18,7 @@ import SectionTestimonials from './components/SectionTestimonials.vue'
 import SectionSpecials from './components/SectionSpecials.vue'
 import SectionCustomService from './components/SectionCustomService.vue'
 import SectionTeam from './components/SectionTeam.vue'
+import SectionPartners from './components/SectionPartners.vue'
 import FooterApp from './components/FooterApp.vue'
 
 export default {
@@ -28,6 +30,7 @@ export default {
     SectionSpecials,
     SectionCustomService,
     SectionTeam,
+    SectionPartners,
     FooterApp,
   },
   data() {
@@ -182,6 +185,28 @@ export default {
           vote_relevance: 10,
         },
       ],
+      partners:[
+        {
+          name:'Cowboy',
+          logo:'h1-clients-img-1',
+        },
+        {
+          name:'Gordon',
+          logo:'h1-clients-img-2',
+        },
+        {
+          name:'Big Cheese',
+          logo:'h1-clients-img-3',
+        },
+        {
+          name:'Bludoos Bar',
+          logo:'h1-clients-img-4',
+        },
+        {
+          name:'Vegan',
+          logo:'h1-clients-img-5',
+        },
+      ]
     }
   },
   methods: {},
