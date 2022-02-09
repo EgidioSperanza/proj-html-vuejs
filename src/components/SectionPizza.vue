@@ -7,8 +7,14 @@
       in pretium molestie. Interdum et malesuada fames ac.
     </p>
     <div class="slider-pizza">
-      <div class="menu-pizza" :style="{ left: firstListPosition + 'px' }" @mouseover="stopSlider()" @mouseleave="autoplaySliderMenu()">
-        <div class="pizza" v-for="(pizza, index) in pizzaMenu" :key="index">
+      <div class="menu-pizza" :style="{ left: firstListPosition + 'px' }">
+        <div
+          class="pizza"
+          v-for="(pizza, index) in pizzaMenu"
+          :key="index"
+          @mouseover="stopSlider()"
+          @mouseleave="autoplaySliderMenu()"
+        >
           <img :src="`/img/pizza/${pizza.image}.png`" :alt="pizza.name" />
           <div class="sold" v-if="pizza.labelSold">Sold</div>
           <h2>{{ pizza.name }}</h2>
@@ -18,8 +24,14 @@
           </p>
         </div>
       </div>
-      <div class="menu-pizza" :style="{ left: secondListPosition + 'px' }" @mouseover="stopSlider()" @mouseleave="autoplaySliderMenu()">
-        <div class="pizza" v-for="(pizza, index) in pizzaMenu" :key="index">
+      <div class="menu-pizza" :style="{ left: secondListPosition + 'px' }">
+        <div
+          class="pizza"
+          v-for="(pizza, index) in pizzaMenu"
+          :key="index"
+          @mouseover="stopSlider()"
+          @mouseleave="autoplaySliderMenu()"
+        >
           <div class="sold" v-if="pizza.labelSold">Sold</div>
 
           <img :src="`/img/pizza/${pizza.image}.png`" :alt="pizza.name" />
@@ -51,7 +63,7 @@ export default {
   methods: {
     autoplaySliderMenu() {
       if (!this.intervalId) {
-        this.intervalId = setInterval(this.sliderMotion, 0.1)
+        this.intervalId = setInterval(this.sliderMotion, 1)
       }
     },
     sliderMotion() {
@@ -87,80 +99,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '@/style/variables.scss';
-
-.section-pizza {
-  width: 100%;
-  height: 700px;
-  padding: 100px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h4,
-  h1 {
-    text-transform: uppercase;
-  }
-  h4 {
-    color: $text-orange-red;
-    margin-bottom: 5px;
-  }
-  h1 {
-    margin-bottom: 10px;
-  }
-  p {
-    width: 500px;
-    color: $text-gray;
-    text-align: center;
-    line-height: 25px;
-    padding-bottom: 100px;
-  }
-  .slider-pizza {
-    position: relative;
-    width: 100%;
-    .menu-pizza {
-      width: 100%;
-      display: flex;
-      padding-bottom: 200px;
-      position: absolute;
-      .pizza {
-        width: 200px;
-        margin: 0 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        &:hover{
-          transform: scale(1.2);
-        }
-        h2{
-          color:$text-gold;
-        }
-        p{
-          color:$text-orange-red;
-          font-weight: 900;
-        }
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-        .sold {
-          position: absolute;
-          top: 20px;
-          right: 0;
-          width: 60px;
-          height: 60px;
-          border-radius: 100%;
-          background-color: $bkg-orange-red;
-          color:$text-no-pure-white;
-          text-transform: uppercase;
-          text-align: center;
-          line-height: 60px;
-          font-size: 12px;
-        }
-      }
-    }
-  }
-}
+@import '@/style/pizza.scss';
 </style>

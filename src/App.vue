@@ -8,6 +8,7 @@
     <section-team :teamMembers="teamMembers" />
     <section-partners :partners="partners" />
     <section-pizza :pizzaMenu="pizzaMenu" />
+    <section-events :events="events" />
     <footer-app />
   </div>
 </template>
@@ -21,6 +22,7 @@ import SectionCustomService from './components/SectionCustomService.vue'
 import SectionTeam from './components/SectionTeam.vue'
 import SectionPartners from './components/SectionPartners.vue'
 import SectionPizza from './components/SectionPizza.vue'
+import SectionEvents from './components/SectionEvents.vue'
 import FooterApp from './components/FooterApp.vue'
 
 export default {
@@ -34,6 +36,7 @@ export default {
     SectionTeam,
     SectionPartners,
     SectionPizza,
+    SectionEvents,
     FooterApp,
   },
   data() {
@@ -252,6 +255,26 @@ export default {
           minPrice: '$50.00',
           maxPrice: '95.00',
           labelSold: false,
+        },
+      ],
+      events: [
+        {
+          event: 'traditional neapolitan pies in kyoto pizza mercato',
+          location: '204 E. Pizzetta Tommaso',
+          dateDay: '02',
+          dateMonth: 'nov',
+        },
+        {
+          event: 'terrazza patio dining space opening this weekend',
+          location: '204 E. Pizzetta Tommaso',
+          dateDay: '03',
+          dateMonth: 'nov',
+        },
+        {
+          event: 'sienna private dining room with stéphane brunn',
+          location: '204 E. Pizzetta Tommaso',
+          dateDay: '05',
+          dateMonth: 'nov',
         },
       ],
     }
