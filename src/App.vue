@@ -9,6 +9,7 @@
     <section-partners :partners="partners" />
     <section-pizza :pizzaMenu="pizzaMenu" />
     <section-events :events="events" />
+    <section-booking />
     <footer-app />
   </div>
 </template>
@@ -23,6 +24,7 @@ import SectionTeam from './components/SectionTeam.vue'
 import SectionPartners from './components/SectionPartners.vue'
 import SectionPizza from './components/SectionPizza.vue'
 import SectionEvents from './components/SectionEvents.vue'
+import SectionBooking from './components/SectionBooking.vue'
 import FooterApp from './components/FooterApp.vue'
 
 export default {
@@ -37,6 +39,7 @@ export default {
     SectionPartners,
     SectionPizza,
     SectionEvents,
+    SectionBooking,
     FooterApp,
   },
   data() {

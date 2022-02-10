@@ -8,9 +8,11 @@
 }
 .events{
     width: 50%;
-    height: 700px;
+    height: 800px;
     background-color: $bkg-dark;
     padding: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 h1,h2,h3,h5{
     text-transform: uppercase;
