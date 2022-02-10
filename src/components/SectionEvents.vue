@@ -1,5 +1,5 @@
 <template>
-  <section class="events-section">
+  <section class="events-section" id="events">
     <div class="events">
       <h5>made with love</h5>
       <h1>delish pizza deals</h1>

@@ -1,5 +1,5 @@
 <template>
-  <section class="testimonials-section">
+  <section class="testimonials-section" id="testimonials">
     <div class="label" @click="prevSlide(lastTestimonials().length - 1)">
       <div class="prev">
         <span>Prev</span>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <a name="top"></a>
-    <header-app :jumboSlides="jumboSlides" />
+    
+    <header-app :jumboSlides="jumboSlides" @scrollTo="scrollTo" />
     <section-news :news="news" />
     <section-testimonials :testimonials="testimonials" />
     <section-specials :specials="specials" />
@@ -15,9 +15,9 @@
       :restaurantsLocations="restaurantsLocations"
       :societySocials="societySocials"
     />
-    <a href="#top"><div class="go-top">
+    <div class="go-top" @click.prevent="scrollTo('#top')">
       <img src="/img/svg/svg-4.svg" alt="" />
-    </div></a>
+    </div>
   </div>
 </template>
 
@@ -341,6 +341,9 @@ export default {
     }
   },
   methods: {
+    scrollTo(selector){
+      document.querySelector(selector).scrollIntoView({behavior:'smooth'})
+    },
   },
 }
 </script>

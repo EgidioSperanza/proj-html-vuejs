@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="top">
     <div class="navbar">
       <nav>
       <div>
@@ -12,8 +12,8 @@
               <img class="hover" src="/img/svg/svg-2.svg" alt="Don Peppe Baffo" />
               Home
             </li>
-            <li>Pages</li>
-            <li>Menu</li>
+            <li @click.prevent="$emit('scrollTo', '#testimonials')">Pages</li>
+            <li @click.prevent="$emit('scrollTo', '#menu')">Menu</li>
           </ul>
         </div>
         <div class="logo">
@@ -24,7 +24,7 @@
         </div>
         <div class="menu-right">
           <ul>
-            <li>Event</li>
+            <li @click.prevent="$emit('scrollTo', '#events')">Event</li>
             <li>Blog</li>
             <li>Landing</li>
           </ul>
