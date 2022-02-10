@@ -52,9 +52,9 @@ export default {
   data() {
     return {
       intervalId: '',
-      menuPizzaWidth: this.pizzaMenu.length * 400, //width+margin
+      menuPizzaWidth: this.pizzaMenu.length * 450, //width+margin
       firstListPosition: 0, //left
-      secondListPosition: this.pizzaMenu.length * 400, //left
+      secondListPosition: this.pizzaMenu.length * 450, //left
     }
   },
   props: {

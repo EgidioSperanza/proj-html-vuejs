@@ -7,13 +7,17 @@
       <nav>
         <div class="menu-left">
           <ul>
-            <li>Home</li>
+            <li>
+              <img class="default" src="/img/svg/svg-0.svg" alt="Don Peppe Baffo" />
+              <img class="hover" src="/img/svg/svg-2.svg" alt="Don Peppe Baffo" />
+              Home
+            </li>
             <li>Pages</li>
             <li>Menu</li>
           </ul>
         </div>
         <div class="logo">
-          <img
+          <img 
             src="/img/logo/h5-logo-divided-header.png"
             alt="Don Peppe Logo"
           />
@@ -25,31 +29,43 @@
             <li>Landing</li>
           </ul>
         </div>
+        <div class="navbar-right">
+          <ul class="right">
+            <li>
+              <img src="/img/svg/svg-1.svg" alt="your Cart" />
+              cart
+              <div class="current-cart">0</div>
+            </li>
+            <li>
+              <i class="fas fa-search"></i>
+              search
+            </li>
+          </ul>
+        </div>
       </nav>
-      <div class="navbar-right">
-        <ul>
-          <li>cart</li>
-          <li>search</li>
-        </ul>
-      </div>
     </div>
     <div class="jumbotron">
-    <div class="label" @click="prevSlide(jumboSlides.length-1)"><div class="prev"><span>Prev</span></div></div>
-    <div>
-      <div
-        v-for="(jumboSlide, index) in jumboSlides"
-        :key="index"
-      >
-      <div :class="currentIndex === index ? 'jumbo-focus' : 'hide'" :style='{ background: `url("/img/jumbotron/${jumboSlide.textImgPath}.png") no-repeat center` }'>
-        <img
-        
-          :src="`/img/jumbotron/${jumboSlide.pizzaImgPath}.png`"
-          alt=""
-        />
+      <div class="label" @click="prevSlide(jumboSlides.length - 1)">
+        <div class="prev"><span>Prev</span></div>
       </div>
+      <div>
+        <div v-for="(jumboSlide, index) in jumboSlides" :key="index">
+          <div
+            :class="currentIndex === index ? 'jumbo-focus' : 'hide'"
+            :style="{
+              background: `url(&quot;/img/jumbotron/${jumboSlide.textImgPath}.png&quot;) no-repeat center`,
+            }"
+          >
+            <img
+              :src="`/img/jumbotron/${jumboSlide.pizzaImgPath}.png`"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="label" @click="nextSlide(jumboSlides.length-1)"><div class="next"><span>Next</span></div></div>
+      <div class="label" @click="nextSlide(jumboSlides.length - 1)">
+        <div class="next"><span>Next</span></div>
+      </div>
     </div>
   </header>
 </template>
@@ -59,7 +75,7 @@ export default {
   name: 'HeaderApp',
   data() {
     return {
-      currentIndex:0
+      currentIndex: 0,
     }
   },
   props: {

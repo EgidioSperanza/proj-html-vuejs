@@ -10,7 +10,10 @@
     <section-pizza :pizzaMenu="pizzaMenu" />
     <section-events :events="events" />
     <section-booking />
-    <footer-app />
+    <footer-app
+      :restaurantsLocations="restaurantsLocations"
+      :societySocials="societySocials"
+    />
   </div>
 </template>
 
@@ -280,9 +283,60 @@ export default {
           dateMonth: 'nov',
         },
       ],
+      restaurantsLocations: [
+        {
+          address: '1614 E. Bell Rd #104.',
+          city: 'Salerno, AZ 85022',
+          telephone: '(602) 867-1010',
+        },
+        {
+          address: '204 E. Pizzetta Tommaso',
+          city: 'Sorrento, AZ 85022',
+          telephone: '(358) 867-1010',
+        },
+        {
+          address: 'Vale Puglia 54',
+          city: 'Torre Del Greco, AZ 85022',
+          telephone: '(359) 867-1010',
+        },
+        {
+          address: 'Corso Itali AA',
+          city: 'Naples, AZ 85022',
+          telephone: '(989) 867-1010',
+        },
+        {
+          address: '1614 E. Bell Rd #104.',
+          city: 'Salerno, AZ 85022',
+          telephone: '(602) 867-1010',
+        },
+        {
+          address: '204 E. Pizzetta Tommaso',
+          city: 'Sorrento, AZ 85022',
+          telephone: '(358) 867-1010',
+        },
+        {
+          address: 'Vale Puglia 54',
+          city: 'Torre Del Greco, AZ 85022',
+          telephone: '(359) 867-1010',
+        },
+        {
+          address: 'Corso Itali AA',
+          city: 'Naples, AZ 85022',
+          telephone: '(989) 867-1010',
+        },
+      ],
+      societySocials: [
+        {
+          twitter: '/path',
+          facebook: '/path',
+          instagram: '/path',
+          linkedin: '/path',
+        },
+      ],
     }
   },
-  methods: {},
+  methods: {
+  },
 }
 </script>
 

@@ -20,6 +20,9 @@ body {
   width: 100%;
 }
 
+h1,h2,h3,h4,h5{
+  text-transform: uppercase;
+}
 a:link,
 a:visited {
   text-decoration: none;
@@ -35,6 +38,10 @@ button {
   height: 60px;
   width: 240px;
   border:none;
+}
+button:hover{
+  background-color: $btn-hover;
+  color: $text-black;
 }
 
 .hide {
