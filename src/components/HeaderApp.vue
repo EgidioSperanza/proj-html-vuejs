@@ -1,13 +1,10 @@
 <template>
   <header id="top">
-    <div class="navbar">
-      <nav>
-      <div>
+    <nav>
         <button>Order Online</button>
-      </div>
-        <div class="menu-left">
+        <div class="menu">
           <ul>
-            <li>
+            <li class="home">
               <img class="default" src="/img/svg/svg-0.svg" alt="Don Peppe Baffo" />
               <img class="hover" src="/img/svg/svg-2.svg" alt="Don Peppe Baffo" />
               Home
@@ -16,23 +13,21 @@
             <li @click.prevent="$emit('scrollTo', '#menu')">Menu</li>
           </ul>
         </div>
-        <div class="logo">
-          <img 
+          <img class="logo"
             src="/img/logo/h5-logo-divided-header.png"
             alt="Don Peppe Logo"
           />
-        </div>
-        <div class="menu-right">
+        <div class="menu">
           <ul>
             <li @click.prevent="$emit('scrollTo', '#events')">Event</li>
             <li>Blog</li>
             <li>Landing</li>
           </ul>
         </div>
-        <div class="navbar-right">
+        <div class="cart">
           <ul class="right">
-            <li>
-              <img src="/img/svg/svg-1.svg" alt="your Cart" />
+            <li class="cart-link">
+              <img class="cart-ico" src="/img/svg/svg-1.svg" alt="your Cart" />
               cart
               <div class="current-cart">0</div>
             </li>
@@ -42,8 +37,7 @@
             </li>
           </ul>
         </div>
-      </nav>
-    </div>
+    </nav>
     <div class="jumbotron">
       <div class="label" @click="prevSlide(jumboSlides.length - 1)">
         <div class="prev"><span>Prev</span></div>
