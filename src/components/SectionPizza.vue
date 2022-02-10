@@ -1,5 +1,5 @@
 <template>
-  <section class="section-pizza">
+  <section class="section-pizza" id="menu">
     <h4>Choose your flavor</h4>
     <h1>the best pizza menu in town</h1>
     <p>

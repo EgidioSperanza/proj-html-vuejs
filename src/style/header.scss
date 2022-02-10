@@ -6,11 +6,11 @@ header {
   background-color: $bkg-dark;
   color: $text-white;
   padding: 20px 0;
+  background:url('/img/pixel-bkg/bkg.jpg');
 
   .navbar {
     margin: 0 auto;
-
-    width: 100%;
+    width: $container-width;
     display: flex;
     justify-content: center;
     align-items: center;

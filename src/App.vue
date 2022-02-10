@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <a name="top"></a>
     <header-app :jumboSlides="jumboSlides" />
     <section-news :news="news" />
     <section-testimonials :testimonials="testimonials" />
@@ -14,13 +15,14 @@
       :restaurantsLocations="restaurantsLocations"
       :societySocials="societySocials"
     />
-    <div class="go-top">
+    <a href="#top"><div class="go-top">
       <img src="/img/svg/svg-4.svg" alt="" />
-    </div>
+    </div></a>
   </div>
 </template>
 
 <script>
+
 import HeaderApp from './components/HeaderApp.vue'
 import SectionNews from './components/SectionNews.vue'
 import SectionTestimonials from './components/SectionTestimonials.vue'

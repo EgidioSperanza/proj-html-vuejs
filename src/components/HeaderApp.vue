@@ -1,10 +1,10 @@
 <template>
   <header>
     <div class="navbar">
+      <nav>
       <div>
         <button>Order Online</button>
       </div>
-      <nav>
         <div class="menu-left">
           <ul>
             <li>
