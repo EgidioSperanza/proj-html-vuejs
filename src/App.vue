@@ -14,6 +14,9 @@
       :restaurantsLocations="restaurantsLocations"
       :societySocials="societySocials"
     />
+    <div class="go-top">
+      <img src="/img/svg/svg-4.svg" alt="" />
+    </div>
   </div>
 </template>
 
