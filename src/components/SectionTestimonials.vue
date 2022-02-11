@@ -1,6 +1,6 @@
 <template>
   <section class="testimonials-section" id="testimonials">
-    <div class="label" @click="prevSlide(lastTestimonials().length - 1)">
+    <div class="label" @click="prevSlide(lastTestimonials())">
       <div class="prev">
         <span>Prev</span>
       </div>
@@ -22,7 +22,7 @@
           </div>
         </div>
     </div>
-    <div class="label" @click="nextSlide(lastTestimonials().length - 1)">
+    <div class="label" @click="nextSlide(lastTestimonials())">
       <div class="next">
         <span>Next</span>
       </div>
@@ -55,13 +55,13 @@ export default {
     },
     prevSlide(iMax) {
       if (this.currentIndex <= 0) {
-        this.currentIndex = iMax
+        this.currentIndex = iMax.length -1
       } else {
         this.currentIndex--
       }
     },
     nextSlide(iMax) {
-      if (this.currentIndex >= iMax) {
+      if (this.currentIndex >= iMax.length -1) {
         this.currentIndex = 0
       } else {
         this.currentIndex++

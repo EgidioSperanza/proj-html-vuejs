@@ -16,7 +16,7 @@
         </div>
         <div class="event-info">
           <h2>{{ event.event }}</h2>
-          <p>{{ event.location }}</p>
+          <p><i class="fas fa-map-marker-alt"></i> {{ event.location }}</p>
         </div>
       </div>
     </div>

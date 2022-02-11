@@ -53,7 +53,10 @@ color: $text-white;
 .event-info{
     display: flex;
     flex-direction: column;
-    margin-left:20px
+    margin-left:20px;
+    > p > i{
+        margin-right: 5px;
+    }
 }
 .advertising-events {
   width: 50%;
